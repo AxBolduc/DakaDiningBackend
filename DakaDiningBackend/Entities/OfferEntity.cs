@@ -5,10 +5,10 @@ namespace DakaDiningBackend.Entities;
 public class OfferEntity
 {
     [Key]
-    public string Id { get; set; }
+    public required string Id { get; set; }
 
-    public string OfferedById { get; set; }
-    public UserEntity OfferedBy { get; set; }
+    public required string OfferedById { get; set; }
+    public UserEntity OfferedBy { get; set; } = null!;
 
     public float Price { get; set; }
 

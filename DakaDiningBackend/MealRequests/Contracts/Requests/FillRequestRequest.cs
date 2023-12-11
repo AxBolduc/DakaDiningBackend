@@ -2,5 +2,5 @@ namespace DakaDiningBackend.MealRequests.Contracts.Requests;
 
 public class FillRequestRequest
 {
-    public string RequestId { get; set; }
+    public required string RequestId { get; set; }
 }

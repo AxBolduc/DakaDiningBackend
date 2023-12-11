@@ -5,16 +5,16 @@ namespace DakaDiningBackend.Entities;
 public class UserEntity
 {
     [Key]
-    public string UserId { get; set; }
+    public required string UserId { get; set; }
 
-    public string FirstName { get; set; }
-    public string LastName { get; set; }
-    public string Email { get; set; }
-    public string Password { get; set; }
+    public required string FirstName { get; set; }
+    public required string LastName { get; set; }
+    public required string Email { get; set; }
+    public required string Password { get; set; }
     public int MealSwipes { get; set; }
     public int MealsOffered { get; set; }
-    public string Plan  { get; set; }
-    public string Role { get; set; }
+    public required string Plan  { get; set; }
+    public required string Role { get; set; }
     public string? ProfilePic { get; set; }
 
     public SessionEntity? Session { get; set; }

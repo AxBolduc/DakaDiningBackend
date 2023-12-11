@@ -55,6 +55,7 @@ public class
         }
         catch (Exception e)
         {
+            _logger.LogError(e.Message);
             ThrowError("Unknown Error Occured", StatusCodes.Status500InternalServerError);
         }
     }

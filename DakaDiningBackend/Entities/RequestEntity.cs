@@ -4,10 +4,10 @@ namespace DakaDiningBackend.Entities;
 
 public class RequestEntity
 {
-    public string Id { get; set; }
+    public required string Id { get; set; }
 
-    public string RequestedById { get; set; }
-    public UserEntity RequestedBy { get; set; }
+    public required string RequestedById { get; set; }
+    public UserEntity RequestedBy { get; set; } = null!;
 
     public float Price { get; set; }
 

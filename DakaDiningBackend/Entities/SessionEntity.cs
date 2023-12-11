@@ -6,8 +6,8 @@ namespace DakaDiningBackend.Entities;
 public class SessionEntity
 {
     [Key]
-    public string SessionId { get; set; }
+    public required string SessionId { get; set; }
 
-    public string UserId { get; set; }
-    public UserEntity? User { get; set; }
+    public required string UserId { get; set; }
+    public UserEntity? User { get; set; } = null!;
 }

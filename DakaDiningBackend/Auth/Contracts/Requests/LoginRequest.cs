@@ -2,7 +2,7 @@ namespace DakaDiningBackend.Auth.Contracts.Requests;
 
 public class LoginRequest
 {
-    public string email { get; set; }
+    public required string Email { get; set; }
 
-    public string password { get; set; }
+    public required string Password { get; set; }
 }

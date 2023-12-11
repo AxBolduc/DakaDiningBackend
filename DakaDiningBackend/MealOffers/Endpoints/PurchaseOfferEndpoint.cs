@@ -55,6 +55,7 @@ public class PurchaseOfferEndpoint : Endpoint<PurchaseOfferRequest, PurchaseOffe
         }
         catch (Exception e)
         {
+            _logger.LogError(e.Message);
             ThrowError("Unknown error occured", StatusCodes.Status500InternalServerError);
         }
 

@@ -14,6 +14,7 @@ public class OfferRequestToOfferEntityMapper : RequestMapper<CreateOfferRequest,
             Price = r.Price,
             Purchased = false,
             OfferedAt = DateTime.Now,
+            OfferedById = String.Empty
         };
     }
 }

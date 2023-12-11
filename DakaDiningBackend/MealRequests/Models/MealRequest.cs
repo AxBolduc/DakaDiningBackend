@@ -2,8 +2,8 @@ namespace DakaDiningBackend.MealRequests.Models;
 
 public class MealRequest
 {
-    public string Id { get; set; }
-    public string RequestedById { get; set; }
+    public required string Id { get; set; }
+    public required string RequestedById { get; set; }
     public float Price { get; set; }
     public DateTime StartTime { get; set; }
     public DateTime EndTime { get; set; }

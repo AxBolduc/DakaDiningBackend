@@ -4,5 +4,5 @@ namespace DakaDiningBackend.MealOffers.Contracts.Responses;
 
 public class PurchaseOfferResponse
 {
-    public OfferDto Offer { get; set; }
+    public required OfferDto Offer { get; set; }
 }

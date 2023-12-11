@@ -25,14 +25,14 @@ public class Login : Endpoint<LoginRequest, LoginResponse>
 
     public override async Task HandleAsync(LoginRequest req, CancellationToken ct)
     {
-        UserEntity? user = _context.Users.SingleOrDefault(user => user.Email == req.email);
+        UserEntity? user = _context.Users.SingleOrDefault(user => user.Email == req.Email);
 
         if (user == null)
         {
-            ThrowError(r => r.email, "A user with the given email does not exist.", StatusCodes.Status404NotFound);
+            ThrowError(r => r.Email, "A user with the given email does not exist.", StatusCodes.Status404NotFound);
         }
 
-        if (BCrypt.Net.BCrypt.Verify(req.password, user.Password))
+        if (BCrypt.Net.BCrypt.Verify(req.Password, user.Password))
         {
             var jwtToken = JWTBearer.CreateToken(
                 signingKey: "THIS_IS_A_SECRET",
@@ -41,7 +41,7 @@ public class Login : Endpoint<LoginRequest, LoginResponse>
                 {
                     u.Roles.Add(user.Role);
                     u.Permissions.AddRange(new[] { "OfferSwipes", "RequestSwipes", "FillRequests", "PurchaseOffers" });
-                    u.Claims.Add(new("Email", req.email));
+                    u.Claims.Add(new("Email", req.Email));
                     u["UserId"] = user.UserId;
                 }
             );
@@ -49,7 +49,7 @@ public class Login : Endpoint<LoginRequest, LoginResponse>
             // Success
             await SendOkAsync(new LoginResponse()
             {
-                userId = user.UserId,
+                UserId = user.UserId,
                 Token = jwtToken
             }, ct);
         }
