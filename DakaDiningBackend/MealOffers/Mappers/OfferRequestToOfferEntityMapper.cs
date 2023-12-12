@@ -13,7 +13,7 @@ public class OfferRequestToOfferEntityMapper : RequestMapper<CreateOfferRequest,
             Id = Guid.NewGuid().ToString(),
             Price = r.Price,
             Purchased = false,
-            OfferedAt = DateTime.Now,
+            OfferedAt = DateTime.UtcNow,
             OfferedById = String.Empty
         };
     }

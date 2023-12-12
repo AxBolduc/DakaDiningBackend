@@ -98,7 +98,7 @@ public class MealRequestsService : IMealRequestsService
 
             existingRequest.Filled = true;
             existingRequest.FilledById = userId;
-            existingRequest.FilledAt = DateTime.Now;
+            existingRequest.FilledAt = DateTime.UtcNow;
 
             _context.Requests.Update(existingRequest);
             _context.SaveChanges();

@@ -15,7 +15,7 @@ public class CreateRequestRequestToRequestEntityMapper : RequestMapper<CreateReq
             Filled = false,
             StartTime = r.StartTime,
             EndTime = r.EndTime,
-            RequestedAt = DateTime.Now,
+            RequestedAt = DateTime.UtcNow,
             RequestedById = String.Empty
         };
     }

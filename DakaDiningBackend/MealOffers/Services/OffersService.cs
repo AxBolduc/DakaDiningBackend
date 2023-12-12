@@ -70,7 +70,7 @@ public class OffersService : IOffersService
 
         existingOffer.Purchased = true;
         existingOffer.PurchasedById = userId;
-        existingOffer.PurchasedAt = DateTime.Now;
+        existingOffer.PurchasedAt = DateTime.UtcNow;
 
         _context.Offers.Update(existingOffer);
         _context.SaveChanges();
