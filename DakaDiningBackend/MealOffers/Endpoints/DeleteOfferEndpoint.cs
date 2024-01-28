@@ -28,8 +28,7 @@ public class DeleteOfferEndpoint : Endpoint<DeleteOfferRequest>
         var offerId = req.OfferId;
         var wasDeleted = _offersService.DeleteOffer(offerId);
 
-        if (!wasDeleted)
-        {
+        if (!wasDeleted) {
             var errMsg = "Failed to find an order with the given id";
             _logger.LogWarning(errMsg);
             ThrowError(o => o.OfferId, errMsg, StatusCodes.Status404NotFound);

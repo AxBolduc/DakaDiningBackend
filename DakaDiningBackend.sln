@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DakaDiningBackend", "DakaDiningBackend\DakaDiningBackend.csproj", "{77ECF30E-FFD4-4F89-93FA-680805634547}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DakaDiningBackend.Test", "DakaDiningBackend.Test\DakaDiningBackend.Test.csproj", "{C9987F10-C99F-4728-8ECE-BBD758C21783}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{77ECF30E-FFD4-4F89-93FA-680805634547}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{77ECF30E-FFD4-4F89-93FA-680805634547}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{77ECF30E-FFD4-4F89-93FA-680805634547}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C9987F10-C99F-4728-8ECE-BBD758C21783}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9987F10-C99F-4728-8ECE-BBD758C21783}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9987F10-C99F-4728-8ECE-BBD758C21783}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9987F10-C99F-4728-8ECE-BBD758C21783}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
